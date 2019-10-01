@@ -1,4 +1,56 @@
-@import colors, fonts 
+@import colors
+
+$transition: .3s
+
+body 
+	font-family: 'FSAlbertArabic', sans-serif
+	color: $color-body
+	&.menubar
+		overflow: hidden
+	&:before 
+		content: ''
+		position: fixed
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		transition: $transition
+		background-color: $color-danger
+		background-image: url(../img/logo-2.svg)
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: 200px
+		z-index: 9999
+		@media (max-width: 575.98px)
+			background-size: 150px
+
+.pace-container
+	overflow: hidden
+	opacity: 0
+	visibility: hidden
+	transition: $transition
+.pace-done 
+	&:before 
+		opacity: 0
+		visibility: hidden
+	.pace-container
+		opacity: 1
+		visibility: visible
+
+.pace
+	pointer-events: none
+	user-select: none
+	&-inactive
+		display: none
+	&-progress
+		position: fixed
+		top: 0
+		right: 100%
+		width: 100%
+		border-top: 3px solid #fff
+		z-index: 99999
+
+@import fonts
 
 * 
 	outline: none !important
@@ -7,15 +59,9 @@ img
 	max-width: 100%
 	height: auto
 
-body 
-	font-family: 'FSAlbertArabic', sans-serif
-	color: #323e48
-	&.menubar
-		overflow: hidden
-
 a 
 	text-decoration: none !important
-	transition: .3s
+	transition: $transition
 
 .container 
 	@media (min-width: 992px)
@@ -38,22 +84,16 @@ a
 	font-weight: 800
 	min-width: 179px
 .btn-danger 
-	background-color: #ff5a5e
+	background-color: $color-danger
 
 .h1, h1
 	font-weight: 300
-	font-size: 180px
+	font-size: 100px
 	@media (max-width: 1199.98px)
-		font-size: 100px
+		font-size: 80px
 	@media (max-width: 575.98px)
 		font-size: 60px
 
-.fz-50 
-	font-size: 50px
-	@media (max-width: 1199.98px)
-		font-size: 34px
-	@media (max-width: 575.98px)
-		font-size: 28px
 .fz-48
 	font-size: 48px
 	@media (max-width: 1199.98px)
@@ -81,16 +121,31 @@ a
 	overflow: hidden
 
 .navbar 
-	transition: .3s
+	transition: $transition
+	.navbar-brand
+		font-size: 50px
+		transition: font-size $transition
+		@media (max-width: 1199.98px)
+			font-size: 34px
+		img
+			transition: width $transition
+			@media (max-width: 575.98px)
+				max-width: 54px
+	&.sticky	
+		background: rgba(81, 92, 100, 0.85)
+		@media (max-width: 1199.98px)
+			.navbar-brand
+				img
+					width: 54px
 	@media (min-width: 1200px)
-		padding: 45px 65px
+		padding: 20px 65px
 		&.sticky	
 			padding-top: 1rem
 			padding-bottom: 1rem
-			background: rgba(81, 92, 100, 0.85)
-	.navbar-brand
-		@media (max-width: 575.98px)
-			max-width: 54px
+			.navbar-brand
+				font-size: 34px
+				img
+					width: 54px
 	.sandwich 
 		width: 30px
 		cursor: pointer
@@ -119,7 +174,7 @@ a
 	background-size: cover
 	text-align: center
 	padding: 64px 0
-	transition: .3s
+	transition: $transition
 	opacity: 0
 	pointer-events: none
 	.closer
@@ -129,7 +184,7 @@ a
 		@media (max-width: 575.98px)
 			margin-bottom: 1rem
 		a 
-			color: #ff5a5e
+			color: $color-danger
 			&:hover 
 				color: #fff
 	.menubar &
@@ -144,7 +199,7 @@ a
 		display: flex
 		flex-direction: column
 		position: relative
-		padding-top: 180px
+		padding-top: 130px
 		@media (max-width: 1199px)
 			padding-top: 106px
 		@media (max-width: 575.98px)
@@ -162,7 +217,7 @@ a
 	.nav-link 
 		padding: 17.5px 15px
 		color: #fff
-		background-color: #ff5a5e
+		background-color: $color-danger
 		border: none
 		border-radius: 0
 		position: relative 
@@ -172,7 +227,7 @@ a
 			&:hover 
 				opacity: .7
 		&.active
-			background-color: #fce88b 
+			background-color: $color-warning 
 			color: inherit
 			&:after
 				content: ''
@@ -180,7 +235,7 @@ a
 				top: 100%
 				left: 50%
 				border: 16px solid transparent
-				border-bottom: 15px solid #fce88b 
+				border-bottom: 15px solid $color-warning 
 				transform: translateX(-50%) rotate(180deg)
 
 .card-my
@@ -219,14 +274,14 @@ a
 	position: relative
 	.hover 
 		color: #fff
-		background-color: #ff5a5e
+		background-color: $color-danger
 		font-weight: bold
 		position: absolute
 		right: 0
 		bottom: 0
 		left: 0
 		opacity: 0
-		transition: .3s
+		transition: $transition
 		padding: 20px 15px
 		@media (min-width: 992px)
 			.col-lg-6 &
@@ -237,7 +292,7 @@ a
 			transform: none
 
 	img 
-		transition: .3s
+		transition: $transition
 		width: 100%
 	&:hover
 		img 
@@ -270,7 +325,7 @@ a
 	a 
 		color: #fff
 		&:hover 
-			color: #ff5a5e
+			color: $color-danger
 
 
 
