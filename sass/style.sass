@@ -1,0 +1,263 @@
+@import colors, fonts 
+
+* 
+	outline: none !important
+
+img 
+	max-width: 100%
+	height: auto
+
+body 
+	font-family: 'FSAlbertArabic', sans-serif
+	color: #323e48
+	&.menubar
+		overflow: hidden
+
+a 
+	text-decoration: none !important
+	transition: .3s
+
+.container 
+	@media (min-width: 992px)
+		padding-left: 50px
+		padding-right: 50px
+	@media (min-width: 1200px)
+		max-width: 960px
+
+.row:not(.no-gutters)
+	margin-left: -10px
+	margin-right: -10px
+	> [class*="col"]
+		padding-left: 10px
+		padding-right: 10px
+
+.btn 
+	font-size: 24px
+	border: 0
+	padding: 7px 28px
+	font-weight: 800
+	min-width: 179px
+.btn-danger 
+	background-color: #ff5a5e
+
+.h1, h1
+	font-weight: 300
+	font-size: 180px
+	@media (max-width: 1199.98px)
+		font-size: 100px
+	@media (max-width: 575.98px)
+		font-size: 60px
+
+.fz-50 
+	font-size: 50px
+	@media (max-width: 1199.98px)
+		font-size: 34px
+	@media (max-width: 575.98px)
+		font-size: 28px
+.fz-48
+	font-size: 48px
+	@media (max-width: 1199.98px)
+		font-size: 30px
+	@media (max-width: 575.98px)
+		font-size: 24px
+.fz-30
+	font-size: 30px
+	line-height: 1.33
+	@media (max-width: 1199.98px)
+		font-size: 24px
+	@media (max-width: 575.98px)
+		font-size: 20px
+.fz-24
+	font-size: 24px
+	@media (max-width: 1199.98px)
+		font-size: 20px
+	@media (max-width: 575.98px)
+		font-size: 18px
+
+.pt-70
+	padding-top: 70px
+
+.o-hidden
+	overflow: hidden
+
+.navbar 
+	background: rgba(81, 92, 100, 0.85)
+	transition: .3s
+	@media (min-width: 1200px)
+		padding: 45px 65px
+		&.sticky	
+			padding-top: 1rem
+			padding-bottom: 1rem
+	.navbar-brand
+		@media (max-width: 575.98px)
+			max-width: 54px
+	.sandwich 
+		width: 30px
+		cursor: pointer
+		&:hover 
+			opacity: .8
+		span 
+			display: block
+			height: 6px
+			background-color: #fff
+			+ span 
+				margin-top: 5px
+	.e
+		&:hover 
+			opacity: .8
+
+#menu 
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	overflow: auto
+	z-index: 1031
+	font-weight: bold
+	background: rgba(50, 63, 73, 0) url(../img/menu.png) no-repeat center center
+	background-size: cover
+	text-align: center
+	padding: 64px 0
+	transition: .3s
+	opacity: 0
+	pointer-events: none
+	.closer
+		font-size: 36px
+	li 
+		margin-bottom: 29px
+		@media (max-width: 575.98px)
+			margin-bottom: 1rem
+		a 
+			color: #ff5a5e
+			&:hover 
+				color: #fff
+	.menubar &
+		opacity: 1
+		pointer-events: auto
+
+.header 
+	overflow: hidden
+	color: #fff
+	> .container
+		min-height: 100vh
+		display: flex
+		flex-direction: column
+		position: relative
+		padding-top: 180px
+		@media (max-width: 1199px)
+			padding-top: 106px
+		@media (max-width: 575.98px)
+			padding-top: 80px
+		.img
+			position: absolute
+			top: 425px
+			left: -298px
+		.my-auto
+			padding-top: 70px
+			padding-bottom: 70px
+
+.nav-pills
+	font-weight: bold
+	.nav-link 
+		padding: 17.5px 15px
+		color: #fff
+		background-color: #ff5a5e
+		border: none
+		border-radius: 0
+		position: relative 
+		@media (min-width: 1200px)
+			font-size: 30px
+		&:not(.active)
+			&:hover 
+				opacity: .7
+		&.active
+			background-color: #fce88b 
+			color: inherit
+			&:after
+				content: ''
+				position: absolute
+				top: 100%
+				left: 50%
+				border: 16px solid transparent
+				border-bottom: 15px solid #fce88b 
+				transform: translateX(-50%) rotate(180deg)
+
+.card-my
+	height: 100%
+	background: #eaebec
+	display: flex
+	flex-direction: column
+	padding: 30px 90px 60px
+	h3 
+		font-size: 30px
+	@media (max-width: 1699.98px)
+		padding: 20px 30px 50px
+		font-size: 20px
+		h3 
+			font-size: 24px
+	@media (max-width: 1449.98px)
+		font-size: 16px
+		img[width="216"]
+			width: 150px
+		h3 
+			font-size: 24px
+	@media (max-width: 1199.98px)
+		padding: 10px 15px 20px
+		img[width="216"]
+			width: 115px
+		h3 
+			font-size: 22px
+	a 
+		color: #187dd0
+		&:hover 
+			opacity: .8
+
+.img-wrap 
+	display: block
+	overflow: hidden
+	position: relative
+	.hover 
+		color: #fff
+		background-color: #ff5a5e
+		font-weight: bold
+		position: absolute
+		right: 0
+		bottom: 0
+		left: 0
+		opacity: 0
+		transition: .3s
+		padding: 20px 15px
+		@media (min-width: 992px)
+			.col-lg-6 &
+				padding: 57px 15px
+	&:hover 
+		.hover
+			opacity: .8
+			transform: none
+
+	img 
+		transition: .3s
+		width: 100%
+	&:hover
+		img 
+			transform: scale(1.1)
+
+.section-2 
+	padding: 132px 0
+	@media (max-width: 1199.98px)
+		padding: 70px 0
+
+.footer 
+	padding: 45px 0 194px
+	background: #00b1af
+	color: #fff
+	font-weight: bold
+	a 
+		color: #fff
+		&:hover 
+			color: #ff5a5e
+
+
+
+

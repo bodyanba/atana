@@ -1,0 +1,286 @@
+@font-face {
+  font-family: "FSAlbertArabic";
+  src: url("../fonts/FSAlbertArabic-Regular.ttf");
+  font-weight: normal; }
+@font-face {
+  font-family: "FSAlbertArabic";
+  src: url("../fonts/FSAlbertArabic-Bold.ttf");
+  font-weight: bold; }
+* {
+  outline: none !important; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+body {
+  font-family: "FSAlbertArabic", sans-serif;
+  color: #323e48; }
+  body.menubar {
+    overflow: hidden; }
+
+a {
+  text-decoration: none !important;
+  transition: 0.3s; }
+
+@media (min-width: 992px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px; } }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 960px; } }
+
+.row:not(.no-gutters) {
+  margin-left: -10px;
+  margin-right: -10px; }
+  .row:not(.no-gutters) > [class*="col"] {
+    padding-left: 10px;
+    padding-right: 10px; }
+
+.btn {
+  font-size: 24px;
+  border: 0;
+  padding: 7px 28px;
+  font-weight: 800;
+  min-width: 179px; }
+
+.btn-danger {
+  background-color: #ff5a5e; }
+
+.h1, h1 {
+  font-weight: 300;
+  font-size: 180px; }
+  @media (max-width: 1199.98px) {
+    .h1, h1 {
+      font-size: 100px; } }
+  @media (max-width: 575.98px) {
+    .h1, h1 {
+      font-size: 60px; } }
+
+.fz-50 {
+  font-size: 50px; }
+  @media (max-width: 1199.98px) {
+    .fz-50 {
+      font-size: 34px; } }
+  @media (max-width: 575.98px) {
+    .fz-50 {
+      font-size: 28px; } }
+
+.fz-48 {
+  font-size: 48px; }
+  @media (max-width: 1199.98px) {
+    .fz-48 {
+      font-size: 30px; } }
+  @media (max-width: 575.98px) {
+    .fz-48 {
+      font-size: 24px; } }
+
+.fz-30 {
+  font-size: 30px;
+  line-height: 1.33; }
+  @media (max-width: 1199.98px) {
+    .fz-30 {
+      font-size: 24px; } }
+  @media (max-width: 575.98px) {
+    .fz-30 {
+      font-size: 20px; } }
+
+.fz-24 {
+  font-size: 24px; }
+  @media (max-width: 1199.98px) {
+    .fz-24 {
+      font-size: 20px; } }
+  @media (max-width: 575.98px) {
+    .fz-24 {
+      font-size: 18px; } }
+
+.pt-70 {
+  padding-top: 70px; }
+
+.o-hidden {
+  overflow: hidden; }
+
+.navbar {
+  background: rgba(81, 92, 100, 0.85);
+  transition: 0.3s; }
+  @media (min-width: 1200px) {
+    .navbar {
+      padding: 45px 65px; }
+      .navbar.sticky {
+        padding-top: 1rem;
+        padding-bottom: 1rem; } }
+  @media (max-width: 575.98px) {
+    .navbar .navbar-brand {
+      max-width: 54px; } }
+  .navbar .sandwich {
+    width: 30px;
+    cursor: pointer; }
+    .navbar .sandwich:hover {
+      opacity: 0.8; }
+    .navbar .sandwich span {
+      display: block;
+      height: 6px;
+      background-color: #fff; }
+      .navbar .sandwich span + span {
+        margin-top: 5px; }
+  .navbar .e:hover {
+    opacity: 0.8; }
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 1031;
+  font-weight: bold;
+  background: rgba(50, 63, 73, 0) url(../img/menu.png) no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 64px 0;
+  transition: 0.3s;
+  opacity: 0;
+  pointer-events: none; }
+  #menu .closer {
+    font-size: 36px; }
+  #menu li {
+    margin-bottom: 29px; }
+    @media (max-width: 575.98px) {
+      #menu li {
+        margin-bottom: 1rem; } }
+    #menu li a {
+      color: #ff5a5e; }
+      #menu li a:hover {
+        color: #fff; }
+  .menubar #menu {
+    opacity: 1;
+    pointer-events: auto; }
+
+.header {
+  overflow: hidden;
+  color: #fff; }
+  .header > .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 180px; }
+    @media (max-width: 1199px) {
+      .header > .container {
+        padding-top: 106px; } }
+    @media (max-width: 575.98px) {
+      .header > .container {
+        padding-top: 80px; } }
+    .header > .container .img {
+      position: absolute;
+      top: 425px;
+      left: -298px; }
+    .header > .container .my-auto {
+      padding-top: 70px;
+      padding-bottom: 70px; }
+
+.nav-pills {
+  font-weight: bold; }
+  .nav-pills .nav-link {
+    padding: 17.5px 15px;
+    color: #fff;
+    background-color: #ff5a5e;
+    border: none;
+    border-radius: 0;
+    position: relative; }
+    @media (min-width: 1200px) {
+      .nav-pills .nav-link {
+        font-size: 30px; } }
+    .nav-pills .nav-link:not(.active):hover {
+      opacity: 0.7; }
+    .nav-pills .nav-link.active {
+      background-color: #fce88b;
+      color: inherit; }
+      .nav-pills .nav-link.active:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        border: 16px solid transparent;
+        border-bottom: 15px solid #fce88b;
+        transform: translateX(-50%) rotate(180deg); }
+
+.card-my {
+  height: 100%;
+  background: #eaebec;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 90px 60px; }
+  .card-my h3 {
+    font-size: 30px; }
+  @media (max-width: 1699.98px) {
+    .card-my {
+      padding: 20px 30px 50px;
+      font-size: 20px; }
+      .card-my h3 {
+        font-size: 24px; } }
+  @media (max-width: 1449.98px) {
+    .card-my {
+      font-size: 16px; }
+      .card-my img[width="216"] {
+        width: 150px; }
+      .card-my h3 {
+        font-size: 24px; } }
+  @media (max-width: 1199.98px) {
+    .card-my {
+      padding: 10px 15px 20px; }
+      .card-my img[width="216"] {
+        width: 115px; }
+      .card-my h3 {
+        font-size: 22px; } }
+  .card-my a {
+    color: #187dd0; }
+    .card-my a:hover {
+      opacity: 0.8; }
+
+.img-wrap {
+  display: block;
+  overflow: hidden;
+  position: relative; }
+  .img-wrap .hover {
+    color: #fff;
+    background-color: #ff5a5e;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px 15px; }
+    @media (min-width: 992px) {
+      .col-lg-6 .img-wrap .hover {
+        padding: 57px 15px; } }
+  .img-wrap:hover .hover {
+    opacity: 0.8;
+    transform: none; }
+  .img-wrap img {
+    transition: 0.3s;
+    width: 100%; }
+  .img-wrap:hover img {
+    transform: scale(1.1); }
+
+.section-2 {
+  padding: 132px 0; }
+  @media (max-width: 1199.98px) {
+    .section-2 {
+      padding: 70px 0; } }
+
+.footer {
+  padding: 45px 0 194px;
+  background: #00b1af;
+  color: #fff;
+  font-weight: bold; }
+  .footer a {
+    color: #fff; }
+    .footer a:hover {
+      color: #ff5a5e; }
+
+/*# sourceMappingURL=style.css.map */
