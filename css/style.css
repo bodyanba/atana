@@ -102,14 +102,14 @@ a {
   overflow: hidden; }
 
 .navbar {
-  background: rgba(81, 92, 100, 0.85);
   transition: 0.3s; }
   @media (min-width: 1200px) {
     .navbar {
       padding: 45px 65px; }
       .navbar.sticky {
         padding-top: 1rem;
-        padding-bottom: 1rem; } }
+        padding-bottom: 1rem;
+        background: rgba(81, 92, 100, 0.85); } }
   @media (max-width: 575.98px) {
     .navbar .navbar-brand {
       max-width: 54px; } }
