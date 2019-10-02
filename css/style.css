@@ -92,7 +92,7 @@ a {
   background-color: #ff5a5e; }
 
 .btn-light {
-  color: #ff5a5e; }
+  color: #ff5a5e !important; }
 
 .form-control {
   background: none !important;
