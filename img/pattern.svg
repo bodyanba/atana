@@ -11,8 +11,6 @@
 	            fill: #fff;
 	        }
           .cls-4 {
-              fill: #e93e1b;
-              mix-blend-mode: hard-light;
               animation-name: opacity;
               animation-iteration-count: infinite;
               opacity: 0;

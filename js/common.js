@@ -2,11 +2,19 @@ $(document).ready(function () {
 
   function headerSticky() {
     if ($(window).scrollTop() > 0) {
+      $('#scroll-top').fadeIn();
       $('.navbar.fixed-top').addClass("sticky");
     } else {
+      $('#scroll-top').fadeOut();
       $('.navbar.fixed-top').removeClass("sticky");
     }
   };
+
+  $('#scroll-top').on("click", function() {
+    $('body, html').animate({
+      scrollTop: 0
+    }, 700);
+  });
 
   $(window).scroll(function() {
     headerSticky();

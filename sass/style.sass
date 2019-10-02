@@ -93,6 +93,13 @@ a
 		font-size: 80px
 	@media (max-width: 575.98px)
 		font-size: 60px
+.h2, h2
+	font-weight: 300
+	font-size: 72px
+	@media (max-width: 1199.98px)
+		font-size: 50px
+	@media (max-width: 575.98px)
+		font-size: 30px
 
 .fz-48
 	font-size: 48px
@@ -204,13 +211,16 @@ a
 			padding-top: 106px
 		@media (max-width: 575.98px)
 			padding-top: 80px
+	.img
+		position: absolute
+		top: 425px
+		left: -298px
+	.my-auto
+		padding-top: 70px
+		padding-bottom: 70px
+	&.header-1
 		.img
-			position: absolute
-			top: 425px
-			left: -298px
-		.my-auto
-			padding-top: 70px
-			padding-bottom: 70px
+			position: static
 
 .nav-pills
 	font-weight: bold
@@ -317,6 +327,55 @@ a
 	@media (max-width: 1199.98px)
 		padding: 70px 0
 
+.section-2
+	[class*="col"]
+		min-height: 480px
+		padding: 59px 48px 43px !important
+		@media (max-width: 1199.98px)
+			min-height: 300px
+		@media (max-width: 767.98px)
+			padding-left: 15px !important
+			padding-right: 15px !important
+		&:nth-child(1)
+			background: $color-body
+		&:nth-child(2)
+			background: url(../img/about-1.jpg)
+			background-size: cover
+		&:nth-child(3)
+			background: $color-danger
+		&:nth-child(4)
+			background: $color-warning
+	&.section-5
+		[class*="col"]
+			&:nth-child(1)
+				background: $color-body
+			&:nth-child(2)
+				background: $color-primary
+			&:nth-child(3)
+				background: $color-warning-3 url(../img/wifi.svg) no-repeat center center
+				background-size: 70%
+			&:nth-child(4)
+				background: $color-warning
+
+.section-3
+	[class*="col"]
+		padding: 48px 15px
+		&:nth-child(1)
+			background: $color-warning-2
+		&:nth-child(2)
+			background: $color-info
+	.img 
+		position: absolute
+		top: 180px
+		left: 84px
+
+.section-4
+	padding: 94px 0
+	background: url(../img/pattern-3.svg) no-repeat center center
+	background-size: auto 90%
+	@media (max-width: 1199.98px)
+		padding: 70px 0 54px
+
 .footer 
 	padding: 45px 0 194px
 	background: #00b1af
@@ -327,6 +386,36 @@ a
 		&:hover 
 			color: $color-danger
 
+#scroll-top
+	font-size: 22px
+	position: fixed
+	right: 80px
+	bottom: 46px
+	width: 35px
+	height: 35px
+	text-align: center
+	padding: 5px
+	border-radius: 5px
+	background-color: $color-danger
+	transition: $transition
+	cursor: pointer
+	color: #fff
+	z-index: 999
+	animation: scroll 2.5s infinite
+	@media (max-width: 575.98px)
+		right: 15px
+	.fa 
+		transition: $transition
+	&:hover
+		opacity: .8
+		transform: rotate(45deg)
+		border-radius: 0
+		animation-play-state: paused
+		.fa	
+			transform: rotate(-45deg)		
+@keyframes scroll
+	50%
+		bottom: 40px
 
 
 
