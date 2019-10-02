@@ -85,6 +85,28 @@ a
 	min-width: 179px
 .btn-danger 
 	background-color: $color-danger
+.btn-light
+	color: $color-danger
+
+.form-control
+	background: none !important
+	box-shadow: none !important
+	border-radius: 0
+	border: 0
+	border-bottom: 1px solid #fff
+	text-align: center
+	color: #fff
+	font-size: inherit
+	font-weight: 300
+	&::-webkit-input-placeholder
+		color: #fff
+	&::-moz-placeholder    
+		color: #fff
+	&:-ms-input-placeholder  
+		color: #fff
+	&:focus 
+		color: $color-warning
+		border-color: $color-warning
 
 .h1, h1
 	font-weight: 300
@@ -375,6 +397,63 @@ a
 	background-size: auto 90%
 	@media (max-width: 1199.98px)
 		padding: 70px 0 54px
+
+.section-6
+	padding: 94px 0
+	@media (max-width: 1199.98px)
+		padding: 70px 0
+
+.section-7
+	padding: 62px 0 107px
+	background: url(../img/bg.jpg) center center
+	background-size: cover
+	@media (max-width: 1199.98px)
+		padding: 70px 0
+
+.section-8
+	padding: 94px 0
+	@media (max-width: 1199.98px)
+		padding: 70px 0 54px
+
+.list-my
+	li 
+		margin-bottom: .5rem
+	img
+		margin-right: 5px
+		margin-top: -5px
+	* 
+		vertical-align: middle
+
+.list-star
+	list-style: none
+	padding-left: 0
+	li 
+		position: relative
+		padding-left: 35px
+		margin-bottom: .5rem
+		&:before 
+			content: ''
+			width: 26px
+			height: 26px
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			margin-top: -3px
+			background: url(../img/star.svg)
+			background-size: cover
+
+.section-9
+	.row
+		background: $color-warning-3
+	[class*="col"]
+		padding: 30px
+		@media (max-width: 767.98px)
+			padding: 50px 15px
+		&:nth-child(1)
+			min-height: 250px
+			background: url(../img/i2.jpg) center center
+			background-size: cover
 
 .footer 
 	padding: 45px 0 194px

@@ -29,6 +29,10 @@ $(document).ready(function () {
   Waves.init();
 
   $(window).enllax();
+
+  $('[data-fancybox*="gallery"]').fancybox({
+    transitionEffect: "circular",
+  });
   
 });
 
