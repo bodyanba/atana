@@ -70,7 +70,7 @@ a
 	@media (min-width: 1200px)
 		max-width: 960px
 
-.row:not(.no-gutters)
+.row:not(.no-gutters):not(.row-normal)
 	margin-left: -10px
 	margin-right: -10px
 	> [class*="col"]
@@ -243,6 +243,9 @@ a
 	&.header-1
 		.img
 			position: static
+	&.header-2
+		> .container 
+			min-height: 570px
 
 .nav-pills
 	font-weight: bold
@@ -454,6 +457,42 @@ a
 			min-height: 250px
 			background: url(../img/i2.jpg) center center
 			background-size: cover
+
+.section-10
+	padding: 76px 0 88px
+	@media (max-width: 1199.98px)
+		padding: 70px 0
+	.img-contacts-1, .img-contacts-2
+		position: absolute
+	.img-contacts-1
+		top: 35%
+		left: -290px
+	.img-contacts-2
+		top: 50%
+		right: -275px
+	a 
+		color: $color-danger
+		&:hover 
+			color: $color-info
+	iframe 
+		display: block
+		width: 100%
+		border: 0
+		height: 300px
+	.contacts
+		margin-top: .25rem
+		background: rgba(0, 177, 175, .2)
+		padding: 28px 22px
+		@media (max-width: 767.98px)
+			padding: 24px 15px
+	.make
+		font-size: 24px
+		ul  
+			margin-bottom: -11px
+			font-size: 36px
+			line-height: 1.4
+			position: relative
+			z-index: 2
 
 .footer 
 	padding: 45px 0 194px
