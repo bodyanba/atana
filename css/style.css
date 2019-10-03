@@ -250,18 +250,25 @@ a {
 .header {
   overflow: hidden;
   color: #fff; }
-  .header > .container {
+  .header > .container, .header .col-100 {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
     padding-top: 130px; }
     @media (max-width: 1199px) {
-      .header > .container {
+      .header > .container, .header .col-100 {
         padding-top: 106px; } }
     @media (max-width: 575.98px) {
-      .header > .container {
+      .header > .container, .header .col-100 {
         padding-top: 80px; } }
+  .header .col-100 {
+    color: inherit; }
+    @media (max-width: 767.98px) {
+      .header .col-100 {
+        min-height: 50vh; } }
+    .header .col-100:hover {
+      color: #ff5a5e; }
   .header .img {
     position: absolute;
     top: 425px;

@@ -223,7 +223,7 @@ a
 .header 
 	overflow: hidden
 	color: #fff
-	> .container
+	> .container, .col-100
 		min-height: 100vh
 		display: flex
 		flex-direction: column
@@ -233,6 +233,12 @@ a
 			padding-top: 106px
 		@media (max-width: 575.98px)
 			padding-top: 80px
+	.col-100
+		color: inherit
+		@media (max-width: 767.98px)
+			min-height: 50vh
+		&:hover 
+			color: $color-danger
 	.img
 		position: absolute
 		top: 425px
