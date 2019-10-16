@@ -3,10 +3,10 @@ $(document).ready(function () {
   function headerSticky() {
     if ($(window).scrollTop() > 0) {
       $('#scroll-top').fadeIn();
-      $('.navbar.fixed-top').addClass("sticky");
+      $('body').addClass("sticky");
     } else {
       $('#scroll-top').fadeOut();
-      $('.navbar.fixed-top').removeClass("sticky");
+      $('body').removeClass("sticky");
     }
   };
 
