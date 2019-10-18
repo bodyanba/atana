@@ -82,12 +82,11 @@ main
 
 .btn 
 	border: 0
-	padding: 7px 12px
+	padding: 8.5px 20px
 	font-weight: 800
 	@media (min-width: 576px)
-		padding: 7px 28px
-		font-size: 24px
-		min-width: 179px
+		padding: 8.5px 24px
+		font-size: 18px
 .btn-danger 
 	background-color: $color-danger
 .btn-light
@@ -155,69 +154,72 @@ main
 	overflow: hidden
 
 .navbar 
-	transition: $transition
+	transition: padding-top $transition, padding-bottom $transition
+	color: #fff
+	fill: #fff
 	.navbar-brand
-		font-size: 50px
-		transition: font-size $transition
-		@media (max-width: 1199.98px)
-			font-size: 34px
-		img
+		color: inherit !important
+		font-size: 34px
+		transition: $transition
+		svg
+			width: 60px
 			transition: width $transition
+			path 
+				fill: inherit
 			@media (max-width: 575.98px)
-				max-width: 54px
+				max-width: 50px
 	.sticky	&
-		background: rgb(81, 92, 100)
-		@media (max-width: 1199.98px)
-			.navbar-brand
-				img
-					width: 54px
+		background: #fff
+		color: inherit
+		fill: inherit
 	@media (min-width: 1200px)
-		padding: 20px 35px
+		padding: 15px 35px
 		.sticky	&
-			padding-top: 1rem
-			padding-bottom: 1rem
+			padding-top: 10px
+			padding-bottom: 10px
 			.navbar-brand
-				font-size: 34px
-				img
-					width: 54px
+				font-size: 26px
+				svg
+					width: 50px
 
 .sandwich 
-	width: 31px
+	width: 23px
 	cursor: pointer
-	color: #fff
+	color: inherit
 	&:hover
 		color: $color-danger
 	span 
 		display: block
 		width: 100%
-		border-bottom: 6px solid
+		border-bottom: 1px solid
 		transform-origin: left center
 		transition: $transition
 		+ span 
-			margin-top: 5px
+			margin-top: 7px
 	.menubar &
 		span
 			&:nth-child(1)
-				transform: translateX(4px) rotate(45deg)
+				transform: translateX(3px) rotate(45deg)
 			&:nth-child(2)
 				width: 0
 				opacity: 0
-				transform: translateX(4px)
+				transform: translateX(3px)
 			&:nth-child(3)
-				transform: translateX(4px) rotate(-45deg)
+				transform: translateX(3px) rotate(-45deg)
 
 .lang
+	font-size: 12px
 	display: inline-block
 	text-align: center
 	text-transform: uppercase
 	padding: 12px 2px 8px
 	border: 1px solid
 	border-radius: 100px
-	color: #fff
-	width: 46px
+	color: inherit
+	width: 40px
 	opacity: 0
 	&:hover
-		opacity: .8
+		color: $color-danger
 
 #menu 
 	position: fixed
@@ -227,11 +229,11 @@ main
 	overflow: auto
 	z-index: 1029
 	font-weight: bold
-	background-color: rgb(81, 92, 100)
-	padding: 130px 0 20px
+	background-color: #fff
+	padding: 100px 0 20px
 	transition: $transition
 	transform: translateX(-100%)
-	width: 550px
+	width: 450px
 	@media (min-width: 992px)
 		padding-left: 1rem
 		padding-right: 1rem
@@ -239,47 +241,47 @@ main
 		padding-left: 35px
 		padding-right: 35px
 		.sticky &
-			width: 440px
+			width: 400px
 	@media (max-width: 1199.98px)
-		width: 440px
+		width: 400px
 	@media (max-width: 575.98px)
 		width: 270px
 	li 
 		margin-bottom: 1rem
 		a 
-			color: $color-danger
+			color: inherit
 			&:hover 
-				color: #fff
+				color: $color-danger
 
 .parallax-mirror
 	transition: left $transition
 
-.menubar 
+.menubar
+	.navbar
+		color: inherit
+		fill: inherit
 	#menu 
 		transform: none
 	main
-		transform: translateX(550px)
+		transform: translateX(450px)
 		overflow: hidden
 		@media (max-width: 1199.98px)
-			transform: translateX(440px)
+			transform: translateX(400px)
 		@media (max-width: 575.98px)
 			transform: translateX(270px)
 	.parallax-mirror
-		left: 550px !important
+		left: 450px !important
 		@media (max-width: 1199.98px)
-			left: 440px !important
+			left: 400px !important
 		@media (max-width: 575.98px)
 			left: 270px !important
 	.lang
 		opacity: 1
-		&:hover 
-			color: $color-danger
-			.sticky &
 	@media (min-width: 1200px)
 		&.sticky main
-			transform: translateX(440px)
+			transform: translateX(400px)
 		&.sticky .parallax-mirror
-			left: 440px !important
+			left: 400px !important
 
 .header 
 	overflow: hidden
@@ -289,11 +291,11 @@ main
 		display: flex
 		flex-direction: column
 		position: relative
-		padding-top: 130px
+		padding-top: 110px
 		@media (max-width: 1199px)
-			padding-top: 106px
+			padding-top: 86px
 		@media (max-width: 575.98px)
-			padding-top: 80px
+			padding-top: 78px
 	.col-100
 		color: inherit
 		@media (max-width: 767.98px)
