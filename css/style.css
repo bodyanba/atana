@@ -181,34 +181,39 @@ main {
 
 .navbar {
   transition: padding-top 0.3s, padding-bottom 0.3s;
-  color: #fff;
-  fill: #fff; }
+  color: #fff; }
   .navbar .navbar-brand {
-    color: inherit !important;
-    font-size: 34px;
-    transition: 0.3s; }
-    .navbar .navbar-brand svg {
-      width: 60px;
-      transition: width 0.3s; }
-      .navbar .navbar-brand svg path {
-        fill: inherit; }
-      @media (max-width: 575.98px) {
-        .navbar .navbar-brand svg {
-          max-width: 50px; } }
+    position: relative;
+    direction: rtl;
+    overflow: hidden; }
+    .navbar .navbar-brand img {
+      height: 60px;
+      transition: 0.3s; }
+      .navbar .navbar-brand img.logo {
+        position: absolute;
+        right: 0;
+        opacity: 0; }
+    @media (max-width: 575.98px) {
+      .navbar .navbar-brand {
+        width: 45px; }
+        .navbar .navbar-brand img {
+          max-height: 50px;
+          max-width: inherit; } }
   .sticky .navbar {
     background: #fff;
-    color: inherit;
-    fill: inherit; }
+    color: inherit; }
+    .sticky .navbar .navbar-brand img {
+      opacity: 0; }
+      .sticky .navbar .navbar-brand img.logo {
+        opacity: 1; }
   @media (min-width: 1200px) {
     .navbar {
       padding: 15px 35px; }
       .sticky .navbar {
         padding-top: 10px;
         padding-bottom: 10px; }
-        .sticky .navbar .navbar-brand {
-          font-size: 26px; }
-          .sticky .navbar .navbar-brand svg {
-            width: 50px; } }
+        .sticky .navbar .navbar-brand img {
+          height: 50px; } }
 
 .sandwich {
   width: 23px;
@@ -287,8 +292,11 @@ main {
   transition: left 0.3s; }
 
 .menubar .navbar {
-  color: inherit;
-  fill: inherit; }
+  color: inherit; }
+  .menubar .navbar .navbar-brand img {
+    opacity: 0; }
+    .menubar .navbar .navbar-brand img.logo {
+      opacity: 1; }
 .menubar #menu {
   transform: none; }
 .menubar main {

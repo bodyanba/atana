@@ -156,31 +156,38 @@ main
 .navbar 
 	transition: padding-top $transition, padding-bottom $transition
 	color: #fff
-	fill: #fff
 	.navbar-brand
-		color: inherit !important
-		font-size: 34px
-		transition: $transition
-		svg
-			width: 60px
-			transition: width $transition
-			path 
-				fill: inherit
-			@media (max-width: 575.98px)
-				max-width: 50px
+		position: relative
+		direction: rtl
+		overflow: hidden
+		img
+			height: 60px
+			transition: $transition
+			&.logo 
+				position: absolute
+				right: 0
+				opacity: 0
+		@media (max-width: 575.98px)
+			width: 45px
+			img
+				max-height: 50px
+				max-width: inherit
 	.sticky	&
 		background: #fff
 		color: inherit
-		fill: inherit
+		.navbar-brand
+			img
+				opacity: 0
+				&.logo 
+					opacity: 1
 	@media (min-width: 1200px)
 		padding: 15px 35px
 		.sticky	&
 			padding-top: 10px
 			padding-bottom: 10px
 			.navbar-brand
-				font-size: 26px
-				svg
-					width: 50px
+				img
+					height: 50px
 
 .sandwich 
 	width: 23px
@@ -259,7 +266,11 @@ main
 .menubar
 	.navbar
 		color: inherit
-		fill: inherit
+		.navbar-brand
+			img
+				opacity: 0
+				&.logo 
+					opacity: 1
 	#menu 
 		transform: none
 	main
